@@ -137,4 +137,79 @@ table {
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+.nav {
+  width: 100vh;
+  margin: 0 auto;
+}
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px;
+}
+.nav__logo {
+  width: 114.14px;
+  height: 130.85px;
+}
+.nav input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.nav ul {
+  display: none;
+}
+.nav input:checked ~ ul {
+  display: block;
+  position: absolute;
+  gap: 1.5rem;
+}
+
+.footer {
+  width: 100vh;
+  margin: 0 auto;
+}
+.footer__container {
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.footer__block-email {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+  background-color: #3f5d45;
+  color: #eaf0ed;
+}
+.footer__caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 20px;
+}
+.footer__logo {
+  width: 171.32px;
+  height: 30px;
+}
+.footer__logo-circle {
+  width: 40px;
+  height: 40px;
+}
+.footer__icons {
+  display: flex;
+  gap: 8px;
+}
+.footer__icon {
+  width: 32px;
+  height: 30px;
+  color: #3f5d45;
+}
+.footer__text {
+  font-size: 1rem;
+  color: #3f5d45;
+  line-height: 1.5;
+  margin-top: 23px;
 }/*# sourceMappingURL=all.css.map */
