@@ -49,32 +49,43 @@
     gap: 20px;
   }
   &__type-area {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     min-width: 100%;
     height: 56px;
     position: relative;
-    &::before {
-      content: url(/src/imgs/mail-24px.png);
-      display: block;
-      width: 24px;
-      height: 56px;
-      background-color: #eaf0ed;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    &::after {
-      content: url(/src/imgs/arrow_forward-24px.png);
-      display: block;
-      width: 64px;
-      height: 56px;
-      background-color: #ffe180;
-      position: absolute;
-      top: 0;
-      right: 100%;
-    }
   }
 
+  &__type-area > div {
+    width: 24px;
+    height: 24px;
+    background-color: #eaf0ed;
+    position: absolute;
+    top: 23px;
+    left: 20px;
+  }
+  &__type-area > div > img {
+    width: 100%;
+    height: 100%;
+  }
+  &__type-area > input {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  &__type-area > button {
+    width: 64px;
+    height: 56px;
+    background-color: #ffe180;
+    border: none;
+    background-color: none;
+    font-size: inherit;
+    color: inherit;
+  }
+  &__type-area > button > img {
+    width: 100%;
+    height: 100%;
+  }
   &__contact {
     display: flex;
     justify-content: space-around;

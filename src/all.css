@@ -192,30 +192,41 @@ table {
   gap: 20px;
 }
 .footer__type-area {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   min-width: 100%;
   height: 56px;
   position: relative;
 }
-.footer__type-area::before {
-  content: url(/src/imgs/mail-24px.png);
-  display: block;
+.footer__type-area > div {
   width: 24px;
-  height: 56px;
+  height: 24px;
   background-color: #eaf0ed;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 23px;
+  left: 20px;
 }
-.footer__type-area::after {
-  content: url(/src/imgs/arrow_forward-24px.png);
-  display: block;
+.footer__type-area > div > img {
+  width: 100%;
+  height: 100%;
+}
+.footer__type-area > input {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.footer__type-area > button {
   width: 64px;
   height: 56px;
   background-color: #ffe180;
-  position: absolute;
-  top: 0;
-  right: 100%;
+  border: none;
+  background-color: none;
+  font-size: inherit;
+  color: inherit;
+}
+.footer__type-area > button > img {
+  width: 100%;
+  height: 100%;
 }
 .footer__contact {
   display: flex;
