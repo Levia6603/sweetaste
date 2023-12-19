@@ -1,0 +1,123 @@
+.nav {
+  width: 100vh;
+  margin: 0 auto;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 30px 30px;
+  }
+  &__logo {
+    width: 114.14px;
+    height: 130.85px;
+  }
+  input {
+    appearance: none;
+  }
+  ul {
+    display: none;
+  }
+  input:checked ~ ul {
+    display: block;
+    position: absolute;
+    gap: 1.5rem;
+  }
+}
+
+.footer {
+  width: 100vh;
+  margin: 0 auto;
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  &__block-email {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+    background-color: #3f5d45;
+    color: #eaf0ed;
+  }
+  &__caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 20px;
+  }
+  &__type-area {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    height: 56px;
+    position: relative;
+  }
+
+  &__type-area > div {
+    width: 24px;
+    height: 24px;
+    background-color: #eaf0ed;
+    position: absolute;
+    top: 23px;
+    left: 20px;
+  }
+  &__type-area > div > img {
+    width: 100%;
+    height: 100%;
+  }
+  &__type-area > input {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  &__type-area > button {
+    width: 64px;
+    height: 56px;
+    background-color: #ffe180;
+    border: none;
+    background-color: none;
+    font-size: inherit;
+    color: inherit;
+  }
+  &__type-area > button > img {
+    width: 100%;
+    height: 100%;
+  }
+  &__contact {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #eaf0ed;
+  }
+  &__logo {
+    width: 171.32px;
+    height: 30px;
+  }
+  &__logo-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__logo ~ div {
+    margin-top: 40px;
+  }
+  &__icons {
+    display: flex;
+    gap: 8px;
+  }
+  &__icon {
+    width: 32px;
+    height: 30px;
+    color: #3f5d45;
+  }
+  &__text {
+    font-size: 1rem;
+    color: #3f5d45;
+    line-height: 1.5;
+    margin-top: 23px;
+  }
+}
