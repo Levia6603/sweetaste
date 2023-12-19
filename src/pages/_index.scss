@@ -1,0 +1,27 @@
+.home_banner {
+  max-width: 100%;
+  margin: 0 auto;
+  &_container {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  &_nav {
+    display: flex;
+    a{
+      color: #3F5D45;
+      text-decoration: none;
+      writing-mode: vertical-lr;
+    }
+    li {
+      width: calc(100% / 3);
+      display: flex;
+      justify-content: center;
+    }
+    .banner_nav1{
+      // background-color: #faa;
+      background-image: url(../imgs/home_banner_nav1.avif);
+    }
+  }
+}

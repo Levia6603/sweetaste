@@ -260,4 +260,31 @@ table {
   color: #3f5d45;
   line-height: 1.5;
   margin-top: 23px;
+}
+
+.home_banner {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.home_banner_container {
+  width: 100%;
+}
+.home_banner_container img {
+  width: 100%;
+}
+.home_banner_nav {
+  display: flex;
+}
+.home_banner_nav a {
+  color: #3F5D45;
+  text-decoration: none;
+  writing-mode: vertical-lr;
+}
+.home_banner_nav li {
+  width: 33.3333333333%;
+  display: flex;
+  justify-content: center;
+}
+.home_banner_nav .banner_nav1 {
+  background-image: url(../imgs/home_banner_nav1.avif);
 }/*# sourceMappingURL=all.css.map */
