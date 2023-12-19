@@ -191,6 +191,32 @@ table {
   font-size: 1.5rem;
   gap: 20px;
 }
+.footer__type-area {
+  display: block;
+  min-width: 100%;
+  height: 56px;
+  position: relative;
+}
+.footer__type-area::before {
+  content: url(/src/imgs/mail-24px.png);
+  display: block;
+  width: 24px;
+  height: 56px;
+  background-color: #eaf0ed;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.footer__type-area::after {
+  content: url(/src/imgs/arrow_forward-24px.png);
+  display: block;
+  width: 64px;
+  height: 56px;
+  background-color: #ffe180;
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
 .footer__contact {
   display: flex;
   justify-content: space-around;
