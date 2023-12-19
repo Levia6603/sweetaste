@@ -139,6 +139,7 @@ table {
   box-sizing: border-box;
 }
 
+/*colors*/
 .nav {
   width: 100vh;
   margin: 0 auto;
@@ -276,7 +277,7 @@ table {
   display: flex;
 }
 .home_banner_nav a {
-  color: #3F5D45;
+  color: #3f5d45;
   text-decoration: none;
   writing-mode: vertical-lr;
 }
