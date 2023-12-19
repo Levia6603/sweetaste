@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -139,6 +140,16 @@ table {
   box-sizing: border-box;
 }
 
+.container {
+  /* 設計稿的網格系統中，一個列寬是 60px */
+  /* 列與列之間的間隔寬度為 20px */
+  /*PC版本*/
+  /* max-width 960px = 60px*12 + 20px*11 + 10px*2(左右兩邊推gutter 的一半)*/
+  max-width: 960px; /* 共 960px */
+  margin: 0 auto; /*垂直置中*/
+  padding: 0 10px; /*gutter的一半= 20/2 =10 px*/
+}
+
 .nav {
   width: 100vh;
   margin: 0 auto;
@@ -260,4 +271,4 @@ table {
   color: #3f5d45;
   line-height: 1.5;
   margin-top: 23px;
-}/*# sourceMappingURL=all.css.map */
+}
