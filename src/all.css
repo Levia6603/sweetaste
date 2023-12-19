@@ -235,17 +235,19 @@ table {
 }
 
 .nav {
-  width: 100vh;
+  width: 100vw;
   margin: 0 auto;
 }
 .nav__container {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  position: relative;
   padding: 30px 30px;
 }
 .nav__logo {
   width: 114.14px;
-  height: 130.85px;
+  height: auto;
 }
 .nav input {
   appearance: none;
@@ -259,8 +261,85 @@ table {
   gap: 1.5rem;
 }
 
+.hero {
+  width: 100vw;
+  margin: 0 auto;
+}
+.hero__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.hero__banner {
+  width: 100%;
+}
+.hero__banner > img {
+  width: 100%;
+}
+
+.menu {
+  width: 100vw;
+  margin: 0 auto;
+}
+.menu__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.menu__category {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.menu__category li:nth-child(1) {
+  background-color: #3f5d45;
+  color: #eaf0ed;
+}
+.menu__category li {
+  color: #3f5d45;
+  padding: 16px 0 16px 0;
+  text-align: center;
+}
+.menu__focus {
+  background-color: #eaf0ed;
+}
+.menu__cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.menu__card {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid #eaf0ed;
+}
+.menu__card > img {
+  width: 100%;
+}
+.menu__info {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  color: #3f5d45;
+  padding: 14px 0;
+}
+.menu__info > div {
+  font-weight: 600;
+}
+.menu__add {
+  width: 100%;
+  border: 0;
+  font-size: 1.5rem;
+  padding: 16px 0;
+}
+
 .footer {
-  width: 100vh;
+  width: 100vw;
   margin: 0 auto;
 }
 .footer__container {
