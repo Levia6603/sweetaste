@@ -1,4 +1,3 @@
-
 // 列與列之間的間距
 $gutter:20px;
 
@@ -24,7 +23,6 @@ $gutter:20px;
   }
 }
 
-
 .container{
     $column-width:60px; /* 設計稿的網格系統中，一個列寬是 60px */
     $gutter:20px; /* 列與列之間的間隔寬度為 20px */
@@ -34,7 +32,4 @@ $gutter:20px;
     max-width: $column-width*12 + $gutter*12;/* 共 960px */
     margin: 0 auto;/*垂直置中*/
     padding: 0 $gutter/2;/*gutter的一半= 20/2 =10 px*/
-   
-    /* Pad 版*/
-    
   }
