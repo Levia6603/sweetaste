@@ -1,15 +1,16 @@
 .nav {
-  width: 100vh;
+  width: 100vw;
   margin: 0 auto;
   &__container {
     display: flex;
     justify-content: space-between;
-
+    width: 100%;
+    position: relative;
     padding: 30px 30px;
   }
   &__logo {
     width: 114.14px;
-    height: 130.85px;
+    height: auto;
   }
   input {
     appearance: none;
@@ -24,8 +25,87 @@
   }
 }
 
+.hero {
+  width: 100vw;
+  margin: 0 auto;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__banner {
+    width: 100%;
+  }
+  &__banner > img {
+    width: 100%;
+  }
+}
+
+.menu {
+  width: 100vw;
+  margin: 0 auto;
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__category {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  &__category li:nth-child(1) {
+    background-color: #3f5d45;
+    color: #eaf0ed;
+  }
+
+  &__category li {
+    color: #3f5d45;
+    padding: 16px 0 16px 0;
+    text-align: center;
+  }
+  &__focus {
+    background-color: #eaf0ed;
+  }
+  &__cards {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  &__card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid #eaf0ed;
+  }
+  &__card > img {
+    width: 100%;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    color: #3f5d45;
+    padding: 14px 0;
+  }
+  &__info > div {
+    font-weight: 600;
+  }
+  &__add {
+    width: 100%;
+    border: 0;
+    font-size: 1.5rem;
+    padding: 16px 0;
+  }
+}
+
 .footer {
-  width: 100vh;
+  width: 100vw;
   margin: 0 auto;
   &__container {
     display: flex;
