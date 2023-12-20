@@ -42,11 +42,11 @@
                         </span>
                     </li>
                     <li>
-                        <span class="radio_button_checked">
+                        <span class="radio_button_unchecked">
                         </span>
                     </li>
                     <li>
-                        <span class="radio_button_checked">
+                        <span class="radio_button_unchecked">
                         </span>
                     </li>
                 </ul>
@@ -56,23 +56,37 @@
                 <div class="namebox">
                     <div class="lastName">
                         <label for="lastName">姓氏</label>
-                        <input type="text" id="lastName">
+                        <input type="text" id="lastName" placeholder="王">
                     </div>
                     <div class="firstName">
                         <label for="firstName">名字</label>
-                        <input type="text" id="firstName">
+                        <input type="text" id="firstName" placeholder="小明">
                     </div>
                 </div>
                 <div class="phone_box">
                     <label for="phonenumber">電話</label>
-                    <input type="text" id="phonenumber">
+                    <input type="text" id="phonenumber" placeholder="0912-345-678">
                 </div>
                 <div class="address_box">
-                    <div class="row">
-                        <input type="select">
+                    <label for="county">地址</label>
+                    <div class="county_address">
+                        <div class="arrow_up_and_down">
+                            <input type="text" id="county" placeholder="高雄市">
+                        </div>
+                        <div class="arrow_up_and_down">
+                            <input type="text" placeholder="新興區">
+                        </div>
                     </div>
+                    <input type="text" id="county" placeholder="幸福路 520 號">
+
                 </div>
             </div>
+        </section>
+    </div>
+    <!-- 下一步按鈕 -->
+    <div class="bgc-yellow">
+        <section class="container button_box">
+            <a href="checkout_2.html" class="next_step_button">下一步</a>
         </section>
     </div>
 

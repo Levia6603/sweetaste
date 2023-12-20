@@ -2,11 +2,15 @@
     background-color: $dark-green;
     padding-top: 30px;
 }
+.bgc-yellow{
+    background-color: $yellow;
+}
 
 .checkout_1{
     padding: 0 30px;
 }
 
+/* 內含進度條樣式 */
 .title_and_progressline{
     margin-bottom: 30px;
     display: flex;
@@ -16,6 +20,7 @@
         font-weight: 600;
         color: white;
     }
+    
     /* 訂單進度條樣式 */
     .progress_line{
         display: flex;
@@ -59,11 +64,12 @@
         }
     }
 }
-
+/* 內含上下箭頭樣式 */
 .transport_formContent{
     display: flex;
     flex-direction: column;
     gap: 16px;
+    padding-bottom:30px;
     .row{
         display: flex;
         justify-content: space-between;
@@ -71,8 +77,23 @@
     input{
         width: 100%;
         height: 56px;
+        background-color: $bg-light;
+        border: none;
+        padding-left: 20px;
+        outline: none;
+        &::placeholder{
+            color: $text-green;
+            font-size: 16px;
+        }
+        &:focus{
+            font-size: 24px;
+        }
     }
-    
+    label{
+        color: $bg-light;
+        font-weight: 600;
+        font-size: 20px;
+    }
     .namebox{
         display: flex;
         justify-content: space-between;
@@ -90,5 +111,61 @@
             gap: 8px;
         }
     }
+    .phone_box{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .address_box{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        /* 上下箭頭樣式 */
+        .arrow_up_and_down{
+            position: relative;
+            width: 100%;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                top: 17px;
+                right: 25px;
+                border: 5px solid;
+                border-color: transparent transparent $dark-green transparent;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                bottom: 17px;
+                right: 25px;
+                border: 5px solid;
+                border-color: $dark-green transparent transparent transparent;
+            }
+        }
+    }
+    .county_address{
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+    }
+}
 
+
+.button_box{
+    text-align: center;
+    padding: 19px 0 13px 0;
+    a{  
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 600;
+        color: $dark-green;
+        &:hover{
+            background-color: $dark-green;
+            padding: 10px 5px 5px 5px;
+            color: $yellow;
+        }   
+    }
 }
