@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -137,4 +138,76 @@ table {
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+/*colors*/
+.col-sm-1 {
+  width: calc((100% - 60px) / 4 * 1 + 0px);
+}
+
+.col-sm-2 {
+  width: calc((100% - 60px) / 4 * 2 + 20px);
+}
+
+.col-sm-3 {
+  width: calc((100% - 60px) / 4 * 3 + 40px);
+}
+
+.col-sm-4 {
+  width: calc((100% - 60px) / 4 * 4 + 60px);
+}
+
+/*
+    可在元素加上此類別，來限制元素的寬度
+    .col-sm-1
+    .col-sm-2
+    .col-sm-3
+    .col-sm-4
+*/
+@media (min-width: 768px) {
+  .col-lg-1 {
+    width: calc((100% - 220px) / 12 * 1 + 0px);
+  }
+  .col-lg-2 {
+    width: calc((100% - 220px) / 12 * 2 + 20px);
+  }
+  .col-lg-3 {
+    width: calc((100% - 220px) / 12 * 3 + 40px);
+  }
+  .col-lg-4 {
+    width: calc((100% - 220px) / 12 * 4 + 60px);
+  }
+  .col-lg-5 {
+    width: calc((100% - 220px) / 12 * 5 + 80px);
+  }
+  .col-lg-6 {
+    width: calc((100% - 220px) / 12 * 6 + 100px);
+  }
+  .col-lg-7 {
+    width: calc((100% - 220px) / 12 * 7 + 120px);
+  }
+  .col-lg-8 {
+    width: calc((100% - 220px) / 12 * 8 + 140px);
+  }
+  .col-lg-9 {
+    width: calc((100% - 220px) / 12 * 9 + 160px);
+  }
+  .col-lg-10 {
+    width: calc((100% - 220px) / 12 * 10 + 180px);
+  }
+  .col-lg-11 {
+    width: calc((100% - 220px) / 12 * 11 + 200px);
+  }
+  .col-lg-12 {
+    width: calc((100% - 220px) / 12 * 12 + 220px);
+  }
+}
+.container {
+  /* 設計稿的網格系統中，一個列寬是 60px */
+  /* 列與列之間的間隔寬度為 20px */
+  /* PC版本 */
+  /* max-width 960px = 60px*12 + 20px*11 + 10px*2(左右兩邊推gutter 的一半)*/
+  max-width: 960px; /* 共 960px */
+  margin: 0 auto; /*垂直置中*/
+  padding: 0 10px; /*gutter的一半= 20/2 =10 px*/
 }/*# sourceMappingURL=all.css.map */
