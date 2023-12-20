@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -139,8 +140,8 @@ table {
   box-sizing: border-box;
 }
 
+/*colors*/
 .nav {
-  width: 100vw;
   margin: 0 auto;
 }
 .nav__container {
@@ -148,11 +149,10 @@ table {
   justify-content: space-between;
   width: 100%;
   position: relative;
-  padding: 30px 30px;
+  padding: 30px;
 }
 .nav__logo {
   width: 114.14px;
-  height: auto;
 }
 .nav input {
   -webkit-appearance: none;
@@ -169,7 +169,6 @@ table {
 }
 
 .hero {
-  width: 100vw;
   margin: 0 auto;
 }
 .hero__container {
@@ -185,7 +184,6 @@ table {
 }
 
 .menu {
-  width: 100vw;
   margin: 0 auto;
 }
 .menu__container {
@@ -217,13 +215,40 @@ table {
 .menu__cards {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
 }
 .menu__card {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
-  border: 1px solid #eaf0ed;
+  padding: 30px 30px 0 30px;
+  position: relative;
+}
+.menu__cards li:nth-child(3) ~ li {
+  display: none;
+}
+.menu__card::before {
+  content: "本日精選";
+  min-width: 2.4rem;
+  min-height: 6.5rem;
+  background-color: #3f5d45;
+  color: #fff;
+  font-size: 1rem;
+  writing-mode: vertical-lr;
+  text-align: center;
+  padding: 12px;
+  position: absolute;
+  top: 30px;
+  left: 51px;
+}
+.menu__card::after {
+  content: url(/src/imgs/favorite_border.png);
+  position: absolute;
+  top: 50px;
+  right: 54.2px;
 }
 .menu__card > img {
   width: 100%;
@@ -234,6 +259,8 @@ table {
   font-size: 20px;
   color: #3f5d45;
   padding: 14px 0;
+  border-left: 1px solid #eaf0ed;
+  border-right: 1px solid #eaf0ed;
 }
 .menu__info > div {
   font-weight: 600;
@@ -244,9 +271,30 @@ table {
   font-size: 1.5rem;
   padding: 16px 0;
 }
+.menu__pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+.menu__page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-width: 1px 0 1px 1px;
+  border-style: solid;
+  border-color: #eaf0ed;
+  font-size: 1.5rem;
+  color: #3f5d45;
+}
+.menu__pages li:nth-child(5) {
+  border-right-width: 1px;
+}
 
 .footer {
-  width: 100vw;
   margin: 0 auto;
 }
 .footer__container {
@@ -292,6 +340,8 @@ table {
 .footer__type-area > input {
   width: 100%;
   height: 100%;
+  padding-left: 65px;
+  font-size: 1.5rem;
   border: none;
 }
 .footer__type-area > button {

@@ -1,16 +1,14 @@
 .nav {
-  width: 100vw;
   margin: 0 auto;
   &__container {
     display: flex;
     justify-content: space-between;
     width: 100%;
     position: relative;
-    padding: 30px 30px;
+    padding: 30px;
   }
   &__logo {
     width: 114.14px;
-    height: auto;
   }
   input {
     appearance: none;
@@ -26,7 +24,6 @@
 }
 
 .hero {
-  width: 100vw;
   margin: 0 auto;
   &__container {
     display: flex;
@@ -43,7 +40,6 @@
 }
 
 .menu {
-  width: 100vw;
   margin: 0 auto;
   &__container {
     display: flex;
@@ -75,13 +71,43 @@
   &__cards {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
   }
+
   &__card {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
-    border: 1px solid #eaf0ed;
+    padding: 30px 30px 0 30px;
+    position: relative;
+  }
+
+  &__cards li:nth-child(3) ~ li {
+    display: none;
+  }
+
+  &__card::before {
+    content: "本日精選";
+    min-width: 2.4rem;
+    min-height: 6.5rem;
+    background-color: $dark-green;
+    color: $white;
+    font-size: 1rem;
+    writing-mode: vertical-lr;
+    text-align: center;
+    padding: 12px;
+    position: absolute;
+    top: 30px;
+    left: 51px;
+  }
+  &__card::after {
+    content: url(/src/imgs/favorite_border.png);
+    position: absolute;
+    top: 50px;
+    right: 54.2px;
   }
   &__card > img {
     width: 100%;
@@ -92,6 +118,8 @@
     font-size: 20px;
     color: #3f5d45;
     padding: 14px 0;
+    border-left: 1px solid $bg-light;
+    border-right: 1px solid $bg-light;
   }
   &__info > div {
     font-weight: 600;
@@ -102,10 +130,32 @@
     font-size: 1.5rem;
     padding: 16px 0;
   }
+
+  &__pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+  }
+  &__page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.75rem;
+    height: 3.75rem;
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: $bg-light;
+    font-size: 1.5rem;
+    color: $dark-green;
+  }
+  &__pages li:nth-child(5) {
+    border-right-width: 1px;
+  }
 }
 
 .footer {
-  width: 100vw;
   margin: 0 auto;
   &__container {
     display: flex;
@@ -151,6 +201,8 @@
   &__type-area > input {
     width: 100%;
     height: 100%;
+    padding-left: 65px;
+    font-size: 1.5rem;
     border: none;
   }
   &__type-area > button {
