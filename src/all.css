@@ -164,54 +164,44 @@ table {
     .col-sm-3
     .col-sm-4
 */
-.col-lg-1 {
-  width: calc((100% - 220px) / 12 * 1 + 0px);
+@media (min-width: 768px) {
+  .col-lg-1 {
+    width: calc((100% - 220px) / 12 * 1 + 0px);
+  }
+  .col-lg-2 {
+    width: calc((100% - 220px) / 12 * 2 + 20px);
+  }
+  .col-lg-3 {
+    width: calc((100% - 220px) / 12 * 3 + 40px);
+  }
+  .col-lg-4 {
+    width: calc((100% - 220px) / 12 * 4 + 60px);
+  }
+  .col-lg-5 {
+    width: calc((100% - 220px) / 12 * 5 + 80px);
+  }
+  .col-lg-6 {
+    width: calc((100% - 220px) / 12 * 6 + 100px);
+  }
+  .col-lg-7 {
+    width: calc((100% - 220px) / 12 * 7 + 120px);
+  }
+  .col-lg-8 {
+    width: calc((100% - 220px) / 12 * 8 + 140px);
+  }
+  .col-lg-9 {
+    width: calc((100% - 220px) / 12 * 9 + 160px);
+  }
+  .col-lg-10 {
+    width: calc((100% - 220px) / 12 * 10 + 180px);
+  }
+  .col-lg-11 {
+    width: calc((100% - 220px) / 12 * 11 + 200px);
+  }
+  .col-lg-12 {
+    width: calc((100% - 220px) / 12 * 12 + 220px);
+  }
 }
-
-.col-lg-2 {
-  width: calc((100% - 220px) / 12 * 2 + 20px);
-}
-
-.col-lg-3 {
-  width: calc((100% - 220px) / 12 * 3 + 40px);
-}
-
-.col-lg-4 {
-  width: calc((100% - 220px) / 12 * 4 + 60px);
-}
-
-.col-lg-5 {
-  width: calc((100% - 220px) / 12 * 5 + 80px);
-}
-
-.col-lg-6 {
-  width: calc((100% - 220px) / 12 * 6 + 100px);
-}
-
-.col-lg-7 {
-  width: calc((100% - 220px) / 12 * 7 + 120px);
-}
-
-.col-lg-8 {
-  width: calc((100% - 220px) / 12 * 8 + 140px);
-}
-
-.col-lg-9 {
-  width: calc((100% - 220px) / 12 * 9 + 160px);
-}
-
-.col-lg-10 {
-  width: calc((100% - 220px) / 12 * 10 + 180px);
-}
-
-.col-lg-11 {
-  width: calc((100% - 220px) / 12 * 11 + 200px);
-}
-
-.col-lg-12 {
-  width: calc((100% - 220px) / 12 * 12 + 220px);
-}
-
 .container {
   /* 設計稿的網格系統中，一個列寬是 60px */
   /* 列與列之間的間隔寬度為 20px */
@@ -426,6 +416,17 @@ table {
 
 body {
   font-family: "Helvetica Neue", "PingFang TC", Times;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .login {
+    padding: 60px 0;
+  }
 }
 
 .content {
@@ -461,6 +462,22 @@ body {
   align-content: center;
 }
 
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.desktop-login {
+  flex-grow: 1;
+}
+@media (min-width: 768px) {
+  .desktop-login {
+    flex-grow: 0;
+    width: 390px;
+  }
+}
+
 .bg-dark {
   background-color: #3f5d45;
 }
@@ -478,6 +495,16 @@ body {
 .login-menu h2 {
   color: #fff;
   font-size: 2.25rem;
+}
+@media (min-width: 768px) {
+  .login-menu h2 {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .login-menu {
+    padding: 16px 30px;
+  }
 }
 
 .login-social li {
@@ -509,7 +536,13 @@ body {
   padding: 0;
 }
 .login-account .login-remember p {
+  line-height: 1;
   color: #fff;
+}
+@media (min-width: 768px) {
+  .login-account {
+    padding: 20px 30px;
+  }
 }
 
 .login-icon {
@@ -543,4 +576,50 @@ body {
   width: 100%;
   height: 100%;
   background-color: #eaf0ed;
+}
+
+.submit-btn {
+  display: block;
+  font-size: 24px;
+  color: #3f5d45;
+}
+
+.desktop-social {
+  display: none;
+  padding: 40px 30px;
+  text-align: center;
+}
+.desktop-social h3 {
+  margin-bottom: 36px;
+  font-size: 24px;
+  color: #8da291;
+}
+@media (min-width: 768px) {
+  .desktop-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 390px;
+  }
+}
+
+.line {
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  vertical-align: middle;
+  background-color: #8da291;
+}
+
+.desktop-socialmenu {
+  gap: 16px;
+}
+.desktop-socialmenu li {
+  display: block;
+  height: 56px;
+  padding-top: 16px;
+  background-color: #fff;
+}
+.desktop-socialmenu img {
+  height: 24px;
 }/*# sourceMappingURL=all.css.map */

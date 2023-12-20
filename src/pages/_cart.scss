@@ -1,7 +1,16 @@
 body {
   font-family: "Helvetica Neue", "PingFang TC", Times;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
 }
 
+.login {
+  @include desktop {
+    padding: 60px 0;
+  }
+}
 .content {
   max-width: 940px;
   margin: 0 auto;
@@ -35,6 +44,18 @@ body {
     align-content: center;
   }
 }
+.mobile {
+  @include desktop {
+    display: none;
+  }
+}
+.desktop-login {
+  flex-grow: 1;
+  @include desktop {
+    flex-grow: 0;
+    width: 390px;
+  }
+}
 .bg {
   &-dark {
     background-color: $dark-green;
@@ -52,6 +73,12 @@ body {
   h2 {
     color: #fff;
     font-size: 2.25rem;
+    @include desktop {
+      margin-top: 40px;
+    }
+  }
+  @include desktop {
+    padding: 16px 30px;
   }
 }
 .login-social {
@@ -82,8 +109,12 @@ body {
   .login-remember {
     padding: 0;
     p {
+      line-height: 1;
       color: #fff;
     }
+  }
+  @include desktop {
+    padding: 20px 30px;
   }
 }
 .login-icon {
@@ -114,5 +145,45 @@ body {
     width: 100%;
     height: 100%;
     background-color: $bg-light;
+  }
+}
+.submit-btn {
+  display: block;
+  font-size: 24px;
+  color: $dark-green;
+}
+.desktop-social {
+  display: none;
+  padding: 40px 30px;
+  text-align: center;
+  h3 {
+    margin-bottom: 36px;
+    font-size: 24px;
+    color: $text-green;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 390px;
+  }
+}
+.line {
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  vertical-align: middle;
+  background-color: $text-green;
+}
+.desktop-socialmenu {
+  gap: 16px;
+  li {
+    display: block;
+    height: 56px;
+    padding-top: 16px;
+    background-color: #fff;
+  }
+  img {
+    height: 24px;
   }
 }
