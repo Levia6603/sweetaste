@@ -17,11 +17,14 @@ $gutter: 20px;
 
 // 設定桌機版的格子寬度 總共 12 格
 // 寫在 media query 裡面保證它只會在某個寬度下作用
-@for $i from 1 through 12 {
-  .col-lg-#{$i} {
-    width: calc((100% - ($gutter * 11)) / 12 * $i + $gutter * ($i - 1));
+@include desktop{
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      width: calc((100% - ($gutter * 11)) / 12 * $i + $gutter * ($i - 1));
+    }
   }
 }
+
 
 .container {
   $column-width: 60px; /* 設計稿的網格系統中，一個列寬是 60px */
@@ -31,5 +34,5 @@ $gutter: 20px;
   /* max-width 960px = 60px*12 + 20px*11 + 10px*2(左右兩邊推gutter 的一半)*/
   max-width: $column-width * 12 + $gutter * 12; /* 共 960px */
   margin: 0 auto; /*垂直置中*/
-  padding: 0 $gutter/2; /*gutter的一半= 20/2 =10 px*/
+  padding: 0 calc($gutter / 2); /*gutter的一半= 20/2 =10 px*/
 }
