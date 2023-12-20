@@ -6,5 +6,122 @@
     <title>Document</title>
     <link rel="stylesheet" href="src/all.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="nav">
+      <div class="nav__container">
+        <label for="burger">
+          <img src="./src/imgs/dehaze-24px.png" alt=" Dropdown menu" />
+          <input type="checkbox" id="burger" />
+          <ul>
+            <li>首頁</li>
+            <li>甜點</li>
+            <li>登入</li>
+          </ul>
+        </label>
+        <div class="nav__logo">
+          <img src="./src/imgs/logotype-sm-dark.svg" alt="logo" />
+        </div>
+
+        <a>
+          <img src="./src/imgs/shopping_cart.png" alt="shopping_cart" />
+        </a>
+      </div>
+    </header>
+
+    <!--main-->
+    <section class="login">
+      <div class="content">
+        <ul class="flex flex-col">
+          <li class="login-menu bg-dark"><h2>會員登入</h2></li>
+          <!--mobile-->
+          <li class="login-menu bg-light">
+            <ul class="login-social flex">
+              <li>
+                <img src="src/imgs/ic-facebook-logotype.svg" alt="Facebook" />
+              </li>
+              <li>
+                <img src="src/imgs/ic-google.svg" alt="Google" />
+              </li>
+              <li>
+                <img src="src/imgs/ic-yahoo.svg" alt="Yahoo" />
+              </li>
+            </ul>
+          </li>
+
+          <li class="login-menu login-account bg-dark flex flex-col">
+            <label class="flex bg-light">
+              <i class="fa-solid fa-user login-icon"></i>
+              <input type="text" placeholder="電子信箱/手機號碼" />
+            </label>
+            <label class="flex bg-light">
+              <i class="fa-solid fa-user login-icon"></i>
+              <input type="text" placeholder="請輸入使用者密碼" />
+            </label>
+            <label class="login-remember flex">
+              <input type="checkbox" class="login-checkbox" />
+              <span class="checkmark bg-yellow"
+                ><i class="fa-solid fa-check"></i
+              ></span>
+              <p>記住我</p>
+            </label>
+          </li>
+          <li class="login-menu bg-yellow">4</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__block-email">
+          <div class="footer__caption">
+            <img
+              src="./src/imgs/logo-light.svg"
+              alt="Logo-circle"
+              class="footer__logo-circle"
+            />
+            <h3>訂閱你我的甜蜜郵件</h3>
+          </div>
+          <div class="footer__type-area">
+            <div>
+              <img src="/src/imgs/mail-24px.png" alt="type your email here." />
+            </div>
+
+            <input type="email" />
+            <button>
+              <img src="/src/imgs/arrow_forward-24px.png" alt="submit btn" />
+            </button>
+          </div>
+        </div>
+        <div class="footer__contact">
+          <img
+            src="./src/imgs/logotype-sm-dark.svg"
+            alt="logo"
+            class="footer__logo"
+          />
+          <ul class="footer__text">
+            <li>07-1234-5678</li>
+            <li>sweetaste@email.com</li>
+            <li>800 高雄市新興區幸福路520號</li>
+          </ul>
+          <div>
+            <ul class="footer__icons">
+              <li class="footer__icon">
+                <img src="./src/imgs/ic-line@.svg" alt="Line@" />
+              </li>
+              <li class="footer__icon">
+                <img src="./src/imgs/ic-facebook.svg" alt="Facebook" />
+              </li>
+            </ul>
+            <p class="footer__text">© 2018 Sweetaste* All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--font awesome-->
+    <script
+      src="https://kit.fontawesome.com/933724d88b.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
