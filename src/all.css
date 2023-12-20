@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -137,6 +138,78 @@ table {
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+/*colors*/
+.col-sm-1 {
+  width: calc((100% - 60px) / 4 * 1 + 0px);
+}
+
+.col-sm-2 {
+  width: calc((100% - 60px) / 4 * 2 + 20px);
+}
+
+.col-sm-3 {
+  width: calc((100% - 60px) / 4 * 3 + 40px);
+}
+
+.col-sm-4 {
+  width: calc((100% - 60px) / 4 * 4 + 60px);
+}
+
+/*
+    可在元素加上此類別，來限制元素的寬度
+    .col-sm-1
+    .col-sm-2
+    .col-sm-3
+    .col-sm-4
+*/
+@media (min-width: 768px) {
+  .col-lg-1 {
+    width: calc((100% - 220px) / 12 * 1 + 0px);
+  }
+  .col-lg-2 {
+    width: calc((100% - 220px) / 12 * 2 + 20px);
+  }
+  .col-lg-3 {
+    width: calc((100% - 220px) / 12 * 3 + 40px);
+  }
+  .col-lg-4 {
+    width: calc((100% - 220px) / 12 * 4 + 60px);
+  }
+  .col-lg-5 {
+    width: calc((100% - 220px) / 12 * 5 + 80px);
+  }
+  .col-lg-6 {
+    width: calc((100% - 220px) / 12 * 6 + 100px);
+  }
+  .col-lg-7 {
+    width: calc((100% - 220px) / 12 * 7 + 120px);
+  }
+  .col-lg-8 {
+    width: calc((100% - 220px) / 12 * 8 + 140px);
+  }
+  .col-lg-9 {
+    width: calc((100% - 220px) / 12 * 9 + 160px);
+  }
+  .col-lg-10 {
+    width: calc((100% - 220px) / 12 * 10 + 180px);
+  }
+  .col-lg-11 {
+    width: calc((100% - 220px) / 12 * 11 + 200px);
+  }
+  .col-lg-12 {
+    width: calc((100% - 220px) / 12 * 12 + 220px);
+  }
+}
+.container {
+  /* 設計稿的網格系統中，一個列寬是 60px */
+  /* 列與列之間的間隔寬度為 20px */
+  /* PC版本 */
+  /* max-width 960px = 60px*12 + 20px*11 + 10px*2(左右兩邊推gutter 的一半)*/
+  max-width: 960px; /* 共 960px */
+  margin: 0 auto; /*垂直置中*/
+  padding: 0 10px; /*gutter的一半= 20/2 =10 px*/
 }
 
 .nav {
@@ -339,4 +412,224 @@ table {
   color: #3f5d45;
   line-height: 1.5;
   margin-top: 23px;
+}
+
+.cart-title {
+  display: block;
+  padding: 16px 0;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: #3f5d45;
+  background-color: #eaf0ed;
+}
+
+body {
+  font-family: "Helvetica Neue", "PingFang TC", Times;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .login {
+    padding: 60px 0;
+  }
+}
+
+.content {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-colreverse {
+  flex-direction: column-reverse;
+}
+
+.j-start {
+  justify-content: flex-start;
+}
+.j-center {
+  justify-content: center;
+}
+.j-between {
+  justify-content: space-between;
+}
+
+.a-center {
+  align-items: center;
+  align-content: center;
+}
+
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.desktop-login {
+  flex-grow: 1;
+}
+@media (min-width: 768px) {
+  .desktop-login {
+    flex-grow: 0;
+    width: 390px;
+  }
+}
+
+.bg-dark {
+  background-color: #3f5d45;
+}
+.bg-light {
+  background-color: #eaf0ed;
+}
+.bg-yellow {
+  background-color: #ffe180;
+}
+
+.login-menu {
+  text-align: center;
+  padding: 30px;
+}
+.login-menu h2 {
+  color: #fff;
+  font-size: 2.25rem;
+}
+@media (min-width: 768px) {
+  .login-menu h2 {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .login-menu {
+    padding: 16px 30px;
+  }
+}
+
+.login-social li {
+  flex-grow: 1;
+  height: 56px;
+  padding-top: 20px;
+  border: 1px solid #eaf0ed;
+  text-align: center;
+  background-color: #fff;
+}
+.login-social li img {
+  width: 73px;
+}
+
+.login-account {
+  gap: 16px;
+}
+.login-account label {
+  width: 100%;
+  padding: 0 20px;
+}
+.login-account input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background-color: #eaf0ed;
+}
+.login-account .login-remember {
+  padding: 0;
+}
+.login-account .login-remember p {
+  line-height: 1;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .login-account {
+    padding: 20px 30px;
+  }
+}
+
+.login-icon {
+  margin: 16px 0;
+  margin-right: 20px;
+  color: #3f5d45;
+}
+
+.login-checkbox {
+  display: none;
+}
+.login-checkbox:checked ~ .checkmark::before {
+  display: none;
+}
+
+.checkmark {
+  position: relative;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+.checkmark i {
+  color: #3f5d45;
+}
+.checkmark::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #eaf0ed;
+}
+
+.submit-btn {
+  display: block;
+  font-size: 24px;
+  color: #3f5d45;
+}
+
+.desktop-social {
+  display: none;
+  padding: 40px 30px;
+  text-align: center;
+}
+.desktop-social h3 {
+  margin-bottom: 36px;
+  font-size: 24px;
+  color: #8da291;
+}
+@media (min-width: 768px) {
+  .desktop-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 390px;
+  }
+}
+
+.line {
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  vertical-align: middle;
+  background-color: #8da291;
+}
+
+.desktop-socialmenu {
+  gap: 16px;
+}
+.desktop-socialmenu li {
+  display: block;
+  height: 56px;
+  padding-top: 16px;
+  background-color: #fff;
+}
+.desktop-socialmenu img {
+  height: 24px;
 }/*# sourceMappingURL=all.css.map */
