@@ -347,10 +347,23 @@ a {
 .home_banner {
   margin: 0 auto;
 }
-.home_banner_container {
-  max-width: 100%;
+.home_banner .container {
+  max-width: 940px;
+  margin: 0 auto;
 }
-.home_banner_container img {
+.home_banner_pic {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .home_banner_pic {
+    max-height: 496px;
+    overflow: hidden;
+  }
+}
+.home_banner_pic img {
   width: 100%;
 }
 .home_banner_nav {
