@@ -154,18 +154,47 @@ table {
 .nav__logo {
   width: 114.14px;
 }
+.nav__container div:nth-child(3) ul {
+  display: none;
+}
 .nav input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
-.nav ul {
+.nav input + ul {
   display: none;
 }
 .nav input:checked ~ ul {
   display: block;
   position: absolute;
   gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .nav__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    padding: 42px;
+  }
+  .nav label {
+    display: none;
+  }
+  .nav__container div:nth-child(3) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__container div:nth-child(3) ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-right: 80px;
+    color: #3f5d45;
+    font-size: 1rem;
+  }
 }
 
 .hero {
@@ -182,6 +211,11 @@ table {
 .hero__banner > img {
   width: 100%;
 }
+@media (min-width: 768px) {
+  .hero__container {
+    padding: 0 42px;
+  }
+}
 
 .menu {
   margin: 0 auto;
@@ -191,6 +225,11 @@ table {
   justify-content: center;
   flex-direction: column;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .menu__container {
+    padding: 0 42px;
+  }
 }
 .menu__category {
   display: flex;
