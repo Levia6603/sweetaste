@@ -19,8 +19,8 @@ $gutter: 20px;
 // 寫在 media query 裡面保證它只會在某個寬度下作用
 @include desktop{
   @for $i from 1 through 12 {
-    .col-lg-#{$i} {
-      width: calc((100% - ($gutter * 11)) / 12 * $i + $gutter * ($i - 1));
+      .col-lg-#{$i} {
+        width: calc((100% - ($gutter * 11)) / 12 * $i + $gutter * ($i - 1));
     }
   }
 }
