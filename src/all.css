@@ -229,6 +229,10 @@ table {
 @media (min-width: 768px) {
   .menu__container {
     padding: 0 42px;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: start;
+    margin-top: 30px;
   }
 }
 .menu__category {
@@ -238,6 +242,19 @@ table {
   width: 100%;
   font-size: 1.5rem;
   font-weight: 600;
+}
+@media (min-width: 768px) {
+  .menu__category {
+    flex: 1;
+  }
+}
+@media (min-width: 768px) {
+  .menu__container div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    flex: 3;
+  }
 }
 .menu__category li:nth-child(1) {
   background-color: #3f5d45;
@@ -254,9 +271,14 @@ table {
 .menu__cards {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .menu__cards {
+    flex-flow: row wrap;
+    gap: 1.5rem;
+  }
 }
 .menu__card {
   display: flex;
@@ -266,8 +288,19 @@ table {
   padding: 30px 30px 0 30px;
   position: relative;
 }
+@media (min-width: 768px) {
+  .menu__card {
+    width: calc(50% - 0.75rem);
+    padding: 0;
+  }
+}
 .menu__cards li:nth-child(3) ~ li {
   display: none;
+}
+@media (min-width: 768px) {
+  .menu__cards li:nth-child(3) ~ li {
+    display: flex;
+  }
 }
 .menu__card::before {
   content: "本日精選";
@@ -283,11 +316,21 @@ table {
   top: 30px;
   left: 51px;
 }
+@media (min-width: 768px) {
+  .menu__card::before {
+    top: 0;
+  }
+}
 .menu__card::after {
   content: url(/src/imgs/favorite_border.png);
   position: absolute;
   top: 50px;
   right: 54.2px;
+}
+@media (min-width: 768px) {
+  .menu__card::after {
+    top: 20px;
+  }
 }
 .menu__card > img {
   width: 100%;
@@ -303,6 +346,7 @@ table {
 }
 .menu__info > div {
   font-weight: 600;
+  border-left: 1px solid #eaf0ed;
 }
 .menu__add {
   width: 100%;
@@ -313,9 +357,15 @@ table {
 .menu__pages {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   text-align: center;
   padding: 30px;
+}
+@media (min-width: 768px) {
+  .menu__pages {
+    padding: 30px 0;
+    justify-content: flex-end;
+  }
 }
 .menu__page {
   display: flex;
