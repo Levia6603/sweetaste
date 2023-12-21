@@ -213,7 +213,6 @@ table {
 }
 
 .nav {
-  width: 100vw;
   margin: 0 auto;
 }
 .nav__container {
@@ -221,16 +220,18 @@ table {
   justify-content: space-between;
   width: 100%;
   position: relative;
-  padding: 30px 30px;
+  padding: 30px;
 }
 .nav__logo {
   width: 114.14px;
-  height: auto;
+}
+.nav__container div:nth-child(3) ul {
+  display: none;
 }
 .nav input {
   appearance: none;
 }
-.nav ul {
+.nav input + ul {
   display: none;
 }
 .nav input:checked ~ ul {
@@ -238,9 +239,34 @@ table {
   position: absolute;
   gap: 1.5rem;
 }
+@media (min-width: 768px) {
+  .nav__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    padding: 42px;
+  }
+  .nav label {
+    display: none;
+  }
+  .nav__container div:nth-child(3) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__container div:nth-child(3) ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-right: 80px;
+    color: #3f5d45;
+    font-size: 1rem;
+  }
+}
 
 .hero {
-  width: 100vw;
   margin: 0 auto;
 }
 .hero__container {
@@ -254,9 +280,13 @@ table {
 .hero__banner > img {
   width: 100%;
 }
+@media (min-width: 768px) {
+  .hero__container {
+    padding: 0 42px;
+  }
+}
 
 .menu {
-  width: 100vw;
   margin: 0 auto;
 }
 .menu__container {
@@ -265,6 +295,15 @@ table {
   flex-direction: column;
   width: 100%;
 }
+@media (min-width: 768px) {
+  .menu__container {
+    padding: 0 42px;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: start;
+    margin-top: 30px;
+  }
+}
 .menu__category {
   display: flex;
   justify-content: center;
@@ -272,6 +311,19 @@ table {
   width: 100%;
   font-size: 1.5rem;
   font-weight: 600;
+}
+@media (min-width: 768px) {
+  .menu__category {
+    flex: 1;
+  }
+}
+@media (min-width: 768px) {
+  .menu__container > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    flex: 3;
+  }
 }
 .menu__category li:nth-child(1) {
   background-color: #3f5d45;
@@ -288,13 +340,66 @@ table {
 .menu__cards {
   display: flex;
   justify-content: center;
+  flex-flow: column wrap;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .menu__cards {
+    flex-flow: row wrap;
+    gap: 1.5rem;
+  }
 }
 .menu__card {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
-  border: 1px solid #eaf0ed;
+  padding: 30px 30px 0 30px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .menu__card {
+    width: calc(50% - 0.75rem);
+    padding: 0;
+  }
+}
+.menu__cards li:nth-child(3) ~ li {
+  display: none;
+}
+@media (min-width: 768px) {
+  .menu__cards li:nth-child(3) ~ li {
+    display: flex;
+  }
+}
+.menu__card::before {
+  content: "本日精選";
+  min-width: 2.4rem;
+  min-height: 6.5rem;
+  background-color: #3f5d45;
+  color: #fff;
+  font-size: 1rem;
+  writing-mode: vertical-lr;
+  text-align: center;
+  padding: 12px;
+  position: absolute;
+  top: 30px;
+  left: 51px;
+}
+@media (min-width: 768px) {
+  .menu__card::before {
+    top: 0;
+  }
+}
+.menu__card::after {
+  content: url(/src/imgs/favorite_border.png);
+  position: absolute;
+  top: 50px;
+  right: 54.2px;
+}
+@media (min-width: 768px) {
+  .menu__card::after {
+    top: 20px;
+  }
 }
 .menu__card > img {
   width: 100%;
@@ -304,10 +409,19 @@ table {
   justify-content: space-around;
   font-size: 20px;
   color: #3f5d45;
-  padding: 14px 0;
+  border-left: 1px solid #eaf0ed;
+  border-right: 1px solid #eaf0ed;
 }
-.menu__info > div {
+.menu__info p {
+  margin: 14px;
+  padding: 0 0 0 14px;
+}
+.menu__info h3 {
+  margin: 14px;
+}
+.menu__info div {
   font-weight: 600;
+  border-left: 1px solid #eaf0ed;
 }
 .menu__add {
   width: 100%;
@@ -315,9 +429,36 @@ table {
   font-size: 1.5rem;
   padding: 16px 0;
 }
+.menu__pages {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  padding: 30px;
+}
+@media (min-width: 768px) {
+  .menu__pages {
+    padding: 30px 0;
+    justify-content: flex-end;
+  }
+}
+.menu__page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-width: 1px 0 1px 1px;
+  border-style: solid;
+  border-color: #eaf0ed;
+  font-size: 1.5rem;
+  color: #3f5d45;
+}
+.menu__pages li:nth-child(5) {
+  border-right-width: 1px;
+}
 
 .footer {
-  width: 100vw;
   margin: 0 auto;
 }
 .footer__container {
@@ -363,6 +504,8 @@ table {
 .footer__type-area > input {
   width: 100%;
   height: 100%;
+  padding-left: 65px;
+  font-size: 1.5rem;
   border: none;
 }
 .footer__type-area > button {
