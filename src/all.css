@@ -446,6 +446,13 @@ table {
   border: 0;
   font-size: 1.5rem;
   padding: 16px 0;
+  color: #3f5d45;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .menu__add {
+    font-weight: 24px;
+  }
 }
 .menu__pages {
   display: flex;
