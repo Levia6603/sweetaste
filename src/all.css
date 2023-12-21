@@ -2000,7 +2000,7 @@ a {
   background-color: #3f5d45;
   color: #eaf0ed;
   font-size: 30px;
-  padding: 10px 20px;
+  padding: 0 20px;
   position: absolute;
   right: 0px;
   top: calc(50% - 25px);
