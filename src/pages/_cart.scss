@@ -1,3 +1,13 @@
+.desktop-cart {
+  @include desktop {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+  }
+}
+.cart {
+  flex-grow: 1;
+}
 .cart-title {
   display: block;
   padding: 16px 0;
@@ -6,4 +16,142 @@
   text-align: center;
   color: $dark-green;
   background-color: $bg-light;
+}
+.cart-album {
+  margin: 30px;
+  gap: 30px;
+  @include desktop {
+    margin: 30px 0;
+  }
+}
+.cart-img {
+  width: 157px;
+  height: 106px;
+  overflow: hidden;
+  img {
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @include desktop {
+    width: 110px;
+    height: 100px;
+  }
+}
+.cart-item {
+  border-bottom: 1px solid $bg-light;
+  color: $dark-green;
+  & > div {
+    padding-bottom: 8.5px;
+    @include desktop {
+      gap: 40px;
+    }
+  }
+}
+.cart-detail {
+  li {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  span {
+    font-size: 16px;
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+}
+.cart-count {
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid $bg-light;
+    font-size: 1rem;
+  }
+}
+.desktop-price {
+  display: none;
+}
+.mobile-price {
+  padding: 8.5px 0;
+  border-top: 1px solid $bg-light;
+  font-size: 20px;
+  @include desktop {
+    display: none;
+  }
+}
+.desktop-price {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
+.desktop-delete {
+  display: none;
+  font-size: 20px;
+  color: #b7b7b7;
+  &:hover {
+    color: $dark-green;
+  }
+  @include desktop {
+    display: block;
+  }
+}
+.cart-total {
+  @include desktop {
+    width: 300px;
+    background-color: $dark-green;
+  }
+}
+.price-count {
+  gap: 1rem;
+  margin: 30px;
+  color: $dark-green;
+  li {
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+  }
+  h3 {
+    flex-grow: 1;
+    padding: 16px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: $bg-light;
+  }
+  @include desktop {
+    margin: 16px;
+    color: #fff;
+    h3 {
+      padding-top: 0;
+      border-bottom: 1px solid #fff;
+      background-color: $dark-green;
+    }
+  }
+}
+.price-total {
+  p {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+.cart-btn {
+  display: block;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: $dark-green;
+  background-color: $yellow;
+  &:hover {
+    color: #fff;
+    background-color: $dark-green;
+  }
 }
