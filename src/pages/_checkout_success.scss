@@ -1,0 +1,74 @@
+.checkout_success{
+    padding: 0;
+    @include desktop{
+        margin-bottom: 60px;
+    }
+    .checkoutSuccess_bgImg{
+        max-width: 940px;
+        height: 518px;
+        background-image: url('https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c5a2cf31c693f5c15fb08135bf1adf2&auto=format&fit=crop&w=800&q=60');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 48px;
+            font-weight: 600;
+            color: $dark-green;
+            margin-bottom: 52px;
+        }
+    }
+    .title_and_progressline{
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        @include desktop{
+            padding: 0 30px;
+        }
+    }
+    /* 訂單進度條樣式 */
+    .progress_line{
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        /**/
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border:1px solid $dark-green;
+            background-color: $dark-green;
+        }
+        > li:nth-child(1){
+            border:1px solid $bg-light;
+        }
+        /* 進度與進度之間的線條樣式 */
+        li + li > span::before{
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 1px;
+            background-color: $text-green;
+            top: 0;
+            bottom: 0;
+            left: -60px;
+            margin: auto;
+            z-index: 0;
+        }
+        .done{
+            color: white;
+            font-size: 16px;
+        }
+    }
+    .bgc-yellow-md{
+        width: 300px;
+    }
+}
