@@ -414,16 +414,6 @@ table {
   margin-top: 23px;
 }
 
-.cart-title {
-  display: block;
-  padding: 16px 0;
-  font-size: 24px;
-  font-weight: 500;
-  text-align: center;
-  color: #3f5d45;
-  background-color: #eaf0ed;
-}
-
 body {
   font-family: "Helvetica Neue", "PingFang TC", Times;
   line-height: 1.5;
@@ -465,6 +455,9 @@ a {
 }
 .j-between {
   justify-content: space-between;
+}
+.j-end {
+  justify-content: flex-end;
 }
 
 .a-center {
@@ -632,4 +625,188 @@ a {
 }
 .desktop-socialmenu img {
   height: 24px;
+}
+
+@media (min-width: 768px) {
+  .desktop-cart {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+  }
+}
+
+.cart {
+  flex-grow: 1;
+}
+
+.cart-title {
+  display: block;
+  padding: 16px 0;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: #3f5d45;
+  background-color: #eaf0ed;
+}
+
+.cart-album {
+  margin: 30px;
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  .cart-album {
+    margin: 30px 0;
+  }
+}
+
+.cart-img {
+  width: 157px;
+  height: 106px;
+  overflow: hidden;
+}
+.cart-img img {
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .cart-img {
+    width: 110px;
+    height: 100px;
+  }
+}
+
+.cart-item {
+  border-bottom: 1px solid #eaf0ed;
+  color: #3f5d45;
+}
+.cart-item > div {
+  padding-bottom: 8.5px;
+}
+@media (min-width: 768px) {
+  .cart-item > div {
+    gap: 40px;
+  }
+}
+
+.cart-detail li {
+  font-size: 20px;
+  line-height: 1.2;
+}
+.cart-detail span {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .cart-detail {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+}
+
+.cart-count p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #eaf0ed;
+  font-size: 1rem;
+}
+
+.desktop-price {
+  display: none;
+}
+
+.mobile-price {
+  padding: 8.5px 0;
+  border-top: 1px solid #eaf0ed;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  .mobile-price {
+    display: none;
+  }
+}
+
+.desktop-price {
+  display: none;
+}
+@media (min-width: 768px) {
+  .desktop-price {
+    display: block;
+  }
+}
+
+.desktop-delete {
+  display: none;
+  font-size: 20px;
+  color: #b7b7b7;
+}
+.desktop-delete:hover {
+  color: #3f5d45;
+}
+@media (min-width: 768px) {
+  .desktop-delete {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .cart-total {
+    width: 300px;
+    background-color: #3f5d45;
+  }
+}
+
+.price-count {
+  gap: 1rem;
+  margin: 30px;
+  color: #3f5d45;
+}
+.price-count li {
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+}
+.price-count h3 {
+  flex-grow: 1;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #eaf0ed;
+}
+@media (min-width: 768px) {
+  .price-count {
+    margin: 16px;
+    color: #fff;
+  }
+  .price-count h3 {
+    padding-top: 0;
+    border-bottom: 1px solid #fff;
+    background-color: #3f5d45;
+  }
+}
+
+.price-total p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.cart-btn {
+  display: block;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: #3f5d45;
+  background-color: #ffe180;
+}
+.cart-btn:hover {
+  color: #fff;
+  background-color: #3f5d45;
 }/*# sourceMappingURL=all.css.map */
