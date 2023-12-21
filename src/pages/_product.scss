@@ -210,6 +210,11 @@
     border: 0;
     font-size: 1.5rem;
     padding: 16px 0;
+    color: $dark-green;
+    font-weight: 600;
+    @include desktop {
+      font-weight: 24px;
+    }
   }
 
   &__pages {
