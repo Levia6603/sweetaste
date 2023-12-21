@@ -7,6 +7,9 @@
     <title>Sweetaste</title>
     <link rel="shortcut icon" href="./src/imgs/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="./src/all.css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -31,8 +34,105 @@
         </div>
     </header>
 
-    <div class="container checkout_3_1">
-
+    <div class="bgc_darkgreen">
+        <div class="container checkout_3_1">
+            <div class="left_section col-lg-6">
+                <!-- 訂單進度條 -->
+                <div class="row title_and_progressline">
+                    <h2>發票</h2>
+                    <ul class="progress_line">
+                        <li>
+                            <span class="material-icons-outlined done">
+                                done
+                            </span>
+                        </li>
+                        <li>
+                            <span class="material-icons-outlined done">
+                                done
+                            </span>
+                        </li>
+                        <li>
+                            <span class="radio_button_checked">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 發票表單內容 -->
+                <div class="invoice_formContent">
+                    <div class="InvoiceMailingMethod_box">
+                        <a href="checkout_3_1.html" class="w-full MailingMethodButton active">電子發票</a>
+                        <a href="checkout_3_2.html" class="w-full MailingMethodButton">郵寄發票</a>
+                    </div>
+                    <div class="ElectronicInvoice_content">
+                        <div class="emailAddres_box">
+                            <label for="emailAddres">電子郵件信箱</label>
+                            <input type="text" id="emailAddres" placeholder="example@email.com">
+                        </div>
+                        <div class="unifiedBusinessNumber_box">
+                            <label for="unifiedBusinessNumber">統一編號（選填）</label>
+                            <input type="text" id="unifiedBusinessNumber" placeholder="12345678">
+                        </div>
+                    </div>
+                </div>
+                <!-- 下一步按鈕(桌機版) -->
+                <div class="bgc-yellow-md">
+                    <section class="button_box">
+                        <a href="checkout_success.html" class="next_step_button">下一步</a>
+                    </section>
+                </div>
+            </div>
+            <div class="right_section col-lg-4">
+                <div class="Order_Summary">
+                    <h2>訂單摘要</h2>
+                    <ul class="Order_Summary_list">
+                        <li class="Order_Summary_item">
+                            <span>小計</span>
+                            <span>NT$ 2,700</span>
+                        </li>
+                        <li class="Order_Summary_item">
+                            <span>運費</span>
+                            <span>NT$ 300</span>
+                        </li>
+                        <li class="Order_Summary_item">
+                            <span>總計</span>
+                            <span>NT$ 3,000</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Shopping_List">
+                    <h2>購物清單</h2>
+                    <ul class="product_list">
+                        <li class="product_item">
+                            <img src="./src/imgs/p-7.png" alt="p-7">
+                            <ul class="product_info">
+                                <li class="product_name">焦糖馬卡龍 (2)</li>
+                                <li class="product_price">NT$ 900</li>
+                            </ul>
+                        </li>
+                        <li class="product_item">
+                            <img src="./src/imgs/p-5.png" alt="p-7">
+                            <ul class="product_info">
+                                <li class="product_name">焦糖馬卡龍 (2)</li>
+                                <li class="product_price">NT$ 900</li>
+                            </ul>
+                        </li>
+                        <li class="product_item">
+                            <img src="./src/imgs/p-3.png" alt="p-7">
+                            <ul class="product_info">
+                                <li class="product_name">焦糖馬卡龍 (2)</li>
+                                <li class="product_price">NT$ 900</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 下一步按鈕(手機版) -->
+    <div class="bgc-yellow-sm">
+        <section class="container button_box">
+            <a href="checkout_success.html" class="next_step_button">下一步</a>
+        </section>
     </div>
 
     <footer class="footer">
