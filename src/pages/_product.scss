@@ -48,6 +48,11 @@
       margin-right: 80px;
       color: $dark-green;
       font-size: 1rem;
+      a {
+        font-weight: 600;
+        color: $dark-green;
+        text-decoration: none;
+      }
     }
   }
 }

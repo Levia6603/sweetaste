@@ -277,6 +277,11 @@ table {
     color: #3f5d45;
     font-size: 1rem;
   }
+  .nav__container div:nth-child(3) ul a {
+    font-weight: 600;
+    color: #3f5d45;
+    text-decoration: none;
+  }
 }
 
 .hero {
