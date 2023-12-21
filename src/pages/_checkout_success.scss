@@ -1,5 +1,8 @@
 .checkout_success{
     padding: 0;
+    @include desktop{
+        margin-bottom: 60px;
+    }
     .checkoutSuccess_bgImg{
         max-width: 940px;
         height: 518px;
