@@ -186,11 +186,17 @@
     justify-content: space-around;
     font-size: 20px;
     color: #3f5d45;
-    padding: 14px 0;
     border-left: 1px solid $bg-light;
     border-right: 1px solid $bg-light;
   }
-  &__info > div {
+  &__info p {
+    margin: 14px;
+    padding: 0 0 0 14px;
+  }
+  &__info h3 {
+    margin: 14px;
+  }
+  &__info div {
     font-weight: 600;
     border-left: 1px solid $bg-light;
   }
