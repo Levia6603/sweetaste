@@ -140,6 +140,17 @@ table {
   box-sizing: border-box;
 }
 
+.container {
+  /* 設計稿的網格系統中，一個列寬是 60px */
+  /* 列與列之間的間隔寬度為 20px */
+  /* PC版本 */
+  /* max-width 960px = 60px*12 + 20px*11 + 10px*2(左右兩邊推gutter 的一半)*/
+  max-width: 960px; /* 共 960px */
+  margin: 0 auto; /*垂直置中*/
+  padding: 0 10px; /*gutter的一半= 20/2 =10 px*/
+  /* Pad 版*/
+}
+
 /*colors*/
 .col-sm-1 {
   width: calc((100% - 60px) / 4 * 1 + 0px);
@@ -164,44 +175,54 @@ table {
     .col-sm-3
     .col-sm-4
 */
-@media (min-width: 768px) {
-  .col-lg-1 {
-    width: calc((100% - 220px) / 12 * 1 + 0px);
-  }
-  .col-lg-2 {
-    width: calc((100% - 220px) / 12 * 2 + 20px);
-  }
-  .col-lg-3 {
-    width: calc((100% - 220px) / 12 * 3 + 40px);
-  }
-  .col-lg-4 {
-    width: calc((100% - 220px) / 12 * 4 + 60px);
-  }
-  .col-lg-5 {
-    width: calc((100% - 220px) / 12 * 5 + 80px);
-  }
-  .col-lg-6 {
-    width: calc((100% - 220px) / 12 * 6 + 100px);
-  }
-  .col-lg-7 {
-    width: calc((100% - 220px) / 12 * 7 + 120px);
-  }
-  .col-lg-8 {
-    width: calc((100% - 220px) / 12 * 8 + 140px);
-  }
-  .col-lg-9 {
-    width: calc((100% - 220px) / 12 * 9 + 160px);
-  }
-  .col-lg-10 {
-    width: calc((100% - 220px) / 12 * 10 + 180px);
-  }
-  .col-lg-11 {
-    width: calc((100% - 220px) / 12 * 11 + 200px);
-  }
-  .col-lg-12 {
-    width: calc((100% - 220px) / 12 * 12 + 220px);
-  }
+.col-lg-1 {
+  width: calc((100% - 220px) / 12 * 1 + 0px);
 }
+
+.col-lg-2 {
+  width: calc((100% - 220px) / 12 * 2 + 20px);
+}
+
+.col-lg-3 {
+  width: calc((100% - 220px) / 12 * 3 + 40px);
+}
+
+.col-lg-4 {
+  width: calc((100% - 220px) / 12 * 4 + 60px);
+}
+
+.col-lg-5 {
+  width: calc((100% - 220px) / 12 * 5 + 80px);
+}
+
+.col-lg-6 {
+  width: calc((100% - 220px) / 12 * 6 + 100px);
+}
+
+.col-lg-7 {
+  width: calc((100% - 220px) / 12 * 7 + 120px);
+}
+
+.col-lg-8 {
+  width: calc((100% - 220px) / 12 * 8 + 140px);
+}
+
+.col-lg-9 {
+  width: calc((100% - 220px) / 12 * 9 + 160px);
+}
+
+.col-lg-10 {
+  width: calc((100% - 220px) / 12 * 10 + 180px);
+}
+
+.col-lg-11 {
+  width: calc((100% - 220px) / 12 * 11 + 200px);
+}
+
+.col-lg-12 {
+  width: calc((100% - 220px) / 12 * 12 + 220px);
+}
+
 .container {
   /* 設計稿的網格系統中，一個列寬是 60px */
   /* 列與列之間的間隔寬度為 20px */
@@ -210,4 +231,204 @@ table {
   max-width: 960px; /* 共 960px */
   margin: 0 auto; /*垂直置中*/
   padding: 0 10px; /*gutter的一半= 20/2 =10 px*/
-}/*# sourceMappingURL=all.css.map */
+}
+
+.nav {
+  width: 100vw;
+  margin: 0 auto;
+}
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  padding: 30px 30px;
+}
+.nav__logo {
+  width: 114.14px;
+  height: auto;
+}
+.nav input {
+  appearance: none;
+}
+.nav ul {
+  display: none;
+}
+.nav input:checked ~ ul {
+  display: block;
+  position: absolute;
+  gap: 1.5rem;
+}
+
+.hero {
+  width: 100vw;
+  margin: 0 auto;
+}
+.hero__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.hero__banner {
+  width: 100%;
+}
+.hero__banner > img {
+  width: 100%;
+}
+
+.menu {
+  width: 100vw;
+  margin: 0 auto;
+}
+.menu__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.menu__category {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.menu__category li:nth-child(1) {
+  background-color: #3f5d45;
+  color: #eaf0ed;
+}
+.menu__category li {
+  color: #3f5d45;
+  padding: 16px 0 16px 0;
+  text-align: center;
+}
+.menu__focus {
+  background-color: #eaf0ed;
+}
+.menu__cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.menu__card {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid #eaf0ed;
+}
+.menu__card > img {
+  width: 100%;
+}
+.menu__info {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  color: #3f5d45;
+  padding: 14px 0;
+}
+.menu__info > div {
+  font-weight: 600;
+}
+.menu__add {
+  width: 100%;
+  border: 0;
+  font-size: 1.5rem;
+  padding: 16px 0;
+}
+
+.footer {
+  width: 100vw;
+  margin: 0 auto;
+}
+.footer__container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.footer__block-email {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+  background-color: #3f5d45;
+  color: #eaf0ed;
+}
+.footer__caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 20px;
+}
+.footer__type-area {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+  height: 56px;
+  position: relative;
+}
+.footer__type-area > div {
+  width: 24px;
+  height: 24px;
+  background-color: #eaf0ed;
+  position: absolute;
+  top: 23px;
+  left: 20px;
+}
+.footer__type-area > div > img {
+  width: 100%;
+  height: 100%;
+}
+.footer__type-area > input {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.footer__type-area > button {
+  width: 64px;
+  height: 56px;
+  background-color: #ffe180;
+  border: none;
+  background-color: none;
+  font-size: inherit;
+  color: inherit;
+}
+.footer__type-area > button > img {
+  width: 100%;
+  height: 100%;
+}
+.footer__contact {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #eaf0ed;
+}
+.footer__logo {
+  width: 171.32px;
+  height: 30px;
+}
+.footer__logo-circle {
+  width: 40px;
+  height: 40px;
+}
+.footer__logo ~ div {
+  margin-top: 40px;
+}
+.footer__icons {
+  display: flex;
+  gap: 8px;
+}
+.footer__icon {
+  width: 32px;
+  height: 30px;
+  color: #3f5d45;
+}
+.footer__text {
+  font-size: 1rem;
+  color: #3f5d45;
+  line-height: 1.5;
+  margin-top: 23px;
+}

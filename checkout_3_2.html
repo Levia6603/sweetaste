@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweetaste</title>
+    <link rel="shortcut icon" href="./src/imgs/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./src/all.css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="nav">
+        <div class="nav__container">
+            <label for="burger">
+                <img src="./src/imgs/dehaze-24px.png" alt=" Dropdown menu" />
+                <input type="checkbox" id="burger" />
+                <ul>
+                    <li>首頁</li>
+                    <li>甜點</li>
+                    <li>登入</li>
+                </ul>
+            </label>
+            <div class="nav__logo">
+                <img src="./src/imgs/logotype-sm-dark.svg" alt="logo" />
+            </div>
+
+            <a>
+                <img src="./src/imgs/shopping_cart.png" alt="shopping_cart" />
+            </a>
+        </div>
+    </header>
+
+    <div class="bgc_darkgreen">
+        <div class="container checkout_3_2">
+            <div class="left_section col-lg-6">
+                <!-- 訂單進度條 -->
+                <div class="row title_and_progressline">
+                    <h2>發票</h2>
+                    <ul class="progress_line">
+                        <li>
+                            <span class="material-icons-outlined done">
+                                done
+                            </span>
+                        </li>
+                        <li>
+                            <span class="material-icons-outlined done">
+                                done
+                            </span>
+                        </li>
+                        <li>
+                            <span class="radio_button_checked">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 發票表單內容 -->
+                <div class="invoice_formContent">
+                    <div class="InvoiceMailingMethod_box">
+                        <a href="checkout_3_1.html" class="w-full MailingMethodButton">電子發票</a>
+                        <a href="checkout_3_2.html" class="w-full MailingMethodButton  active">郵寄發票</a>
+                    </div>
+                    <div class="MailingInvoice_content">
+                        <div class="address_box">
+                            <div class="address_title">
+                                <label for="county">地址</label>
+                                <div class="sameTransportAddress_checkbox">
+                                    <input type="checkbox" id="sameTransportAddress">
+                                    <label for="sameTransportAddress">同運送地址</label>
+                                </div>
+                            </div>
+
+                            <div class="county_address">
+                                <div class="arrow_up_and_down">
+                                    <input type="text" id="county" placeholder="高雄市">
+                                </div>
+                                <div class="arrow_up_and_down">
+                                    <input type="text" placeholder="新興區">
+                                </div>
+                            </div>
+                            <input type="text" id="county" placeholder="幸福路 520 號">
+                        </div>
+                    </div>
+                    <div class="unifiedBusinessNumber_box">
+                        <label for="unifiedBusinessNumber">統一編號（選填）</label>
+                        <input type="text" id="unifiedBusinessNumber" placeholder="12345678">
+                    </div>
+                </div>
+                <!-- 下一步按鈕(桌機版) -->
+                <div class="bgc-yellow-md">
+                    <section class="button_box">
+                        <a href="checkout_success.html" class="next_step_button">下一步</a>
+                    </section>
+                </div>
+            </div>
+            <div class="right_section col-lg-4">
+                <div class="Order_Summary">
+                    <h2>訂單摘要</h2>
+                    <ul class="Order_Summary_list">
+                        <li class="Order_Summary_item">
+                            <span>小計</span>
+                            <span>NT$ 2,700</span>
+                        </li>
+                        <li class="Order_Summary_item">
+                            <span>運費</span>
+                            <span>NT$ 300</span>
+                        </li>
+                        <li class="Order_Summary_item">
+                            <span>總計</span>
+                            <span>NT$ 3,000</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Shopping_List">
+                    <h2>購物清單</h2>
+                    <ul class="product_list">
+                        <li class="product_item">
+                            <img src="./src/imgs/p-7.png" alt="p-7">
+                            <ul class="product_info">
+                                <li class="product_name">焦糖馬卡龍 (2)</li>
+                                <li class="product_price">NT$ 900</li>
+                            </ul>
+                        </li>
+                        <li class="product_item">
+                            <img src="./src/imgs/p-5.png" alt="p-7">
+                            <ul class="product_info">
+                                <li class="product_name">焦糖馬卡龍 (2)</li>
+                                <li class="product_price">NT$ 900</li>
+                            </ul>
+                        </li>
+                        <li class="product_item">
+                            <img src="./src/imgs/p-3.png" alt="p-7">
+                            <ul class="product_info">
+                                <li class="product_name">焦糖馬卡龍 (2)</li>
+                                <li class="product_price">NT$ 900</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 下一步按鈕(手機版) -->
+    <div class="bgc-yellow-sm">
+        <section class="container button_box">
+            <a href="checkout_success.html" class="next_step_button">下一步</a>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__block-email">
+                <div class="footer__caption">
+                    <img src="./src/imgs/logo-light.svg" alt="Logo-circle" class="footer__logo-circle" />
+                    <h3>訂閱你我的甜蜜郵件</h3>
+                </div>
+                <div class="footer__type-area">
+                    <div>
+                        <img src="/src/imgs/mail-24px.png" alt="type your email here." />
+                    </div>
+
+                    <input type="email" />
+                    <button>
+                        <img src="/src/imgs/arrow_forward-24px.png" alt="submit btn" />
+                    </button>
+                </div>
+            </div>
+            <div class="footer__contact">
+                <img src="./src/imgs/logotype-sm-dark.svg" alt="logo" class="footer__logo" />
+                <ul class="footer__text">
+                    <li>07-1234-5678</li>
+                    <li>sweetaste@email.com</li>
+                    <li>800 高雄市新興區幸福路520號</li>
+                </ul>
+                <div>
+                    <ul class="footer__icons">
+                        <li class="footer__icon">
+                            <img src="./src/imgs/ic-line@.svg" alt="Line@" />
+                        </li>
+                        <li class="footer__icon">
+                            <img src="./src/imgs/ic-facebook.svg" alt="Facebook" />
+                        </li>
+                    </ul>
+                    <p class="footer__text">© 2018 Sweetaste* All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

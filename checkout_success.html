@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweetaste</title>
+    <link rel="shortcut icon" href="./src/imgs/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./src/all.css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="nav">
+        <div class="nav__container">
+            <label for="burger">
+                <img src="./src/imgs/dehaze-24px.png" alt=" Dropdown menu" />
+                <input type="checkbox" id="burger" />
+                <ul>
+                    <li>首頁</li>
+                    <li>甜點</li>
+                    <li>登入</li>
+                </ul>
+            </label>
+            <div class="nav__logo">
+                <img src="./src/imgs/logotype-sm-dark.svg" alt="logo" />
+            </div>
+
+            <a>
+                <img src="./src/imgs/shopping_cart.png" alt="shopping_cart" />
+            </a>
+        </div>
+    </header>
+
+
+
+    <div class="container checkout_success">
+        <div class="checkoutSuccess_bgImg">
+            <!-- 訂單進度條 -->
+            <div class="row title_and_progressline">
+                <ul class="progress_line">
+                    <li>
+                        <span class="material-icons-outlined done">
+                            done
+                        </span>
+                    </li>
+                    <li>
+                        <span class="material-icons-outlined done">
+                            done
+                        </span>
+                    </li>
+                    <li>
+                        <span class="material-icons-outlined done">
+                            done
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <h2>付款成功</h2>
+            <!-- 下一步按鈕(桌機版) -->
+            <div class="bgc-yellow-md">
+                <section class="button_box">
+                    <a href="index.html" class="next_step_button">繼續逛逛</a>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- 下一步按鈕(手機版) -->
+    <div class="bgc-yellow-sm">
+        <section class="container button_box">
+            <a href="index.html" class="next_step_button">繼續逛逛</a>
+        </section>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__block-email">
+                <div class="footer__caption">
+                    <img src="./src/imgs/logo-light.svg" alt="Logo-circle" class="footer__logo-circle" />
+                    <h3>訂閱你我的甜蜜郵件</h3>
+                </div>
+                <div class="footer__type-area">
+                    <div>
+                        <img src="/src/imgs/mail-24px.png" alt="type your email here." />
+                    </div>
+
+                    <input type="email" />
+                    <button>
+                        <img src="/src/imgs/arrow_forward-24px.png" alt="submit btn" />
+                    </button>
+                </div>
+            </div>
+            <div class="footer__contact">
+                <img src="./src/imgs/logotype-sm-dark.svg" alt="logo" class="footer__logo" />
+                <ul class="footer__text">
+                    <li>07-1234-5678</li>
+                    <li>sweetaste@email.com</li>
+                    <li>800 高雄市新興區幸福路520號</li>
+                </ul>
+                <div>
+                    <ul class="footer__icons">
+                        <li class="footer__icon">
+                            <img src="./src/imgs/ic-line@.svg" alt="Line@" />
+                        </li>
+                        <li class="footer__icon">
+                            <img src="./src/imgs/ic-facebook.svg" alt="Facebook" />
+                        </li>
+                    </ul>
+                    <p class="footer__text">© 2018 Sweetaste* All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
