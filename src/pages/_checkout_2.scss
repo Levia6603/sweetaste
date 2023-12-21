@@ -103,3 +103,109 @@
         }
     }
 }
+
+/* 付款的表單內容(內含上下箭頭樣式) */
+.payment_formContent{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom:30px;
+    @include desktop{
+        padding: 0 30px 30px 30px;
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+    }
+    input{
+        width: 100%;
+        height: 56px;
+        background-color: $bg-light;
+        border: none;
+        padding-left: 20px;
+        outline: none;
+        &::placeholder{
+            color: $text-green;
+            font-size: 16px;
+        }
+        &:focus{
+            font-size: 24px;
+        }
+    }
+    label{
+        color: $bg-light;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .creditCardNumber_box{
+        position: relative;
+        label{
+            display: block;
+            margin-bottom: 9px;
+        }
+        .credit_card_icon{
+            position: absolute;
+            right: 22px;
+            top: 56px;
+            color: $dark-green;            
+        }
+    }
+    .cardholderName_box{
+        label{
+            display: block;
+            margin-bottom: 8px;
+        }
+        .namebox{
+            display: flex;
+            gap: 9px;
+        }
+    }
+    .creditCardExpirationDate_box{
+        label{
+            display: block;
+            margin-bottom: 8px;
+        }
+        .ExpirationDate{
+            display: flex;
+            gap: 9px;
+        }
+        /* 上下箭頭樣式 */
+        .arrow_up_and_down{
+            position: relative;
+            width: 100%;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                top: 15px;
+                right: 25px;
+                border: 5px solid;
+                border-color: transparent transparent $dark-green transparent;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                bottom: 15px;
+                right: 25px;
+                border: 5px solid;
+                border-color: $dark-green transparent transparent transparent;
+            }
+        }
+    }
+    .creditCardCVV_box{
+        label{
+            display: block;
+            margin-bottom: 8px;
+        }
+        .CVV_inputBox{
+            display: flex;
+            gap: 9px;
+            > input:nth-child(2){
+                visibility: hidden;
+            }
+        }
+    }
+}
