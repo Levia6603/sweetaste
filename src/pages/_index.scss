@@ -1,21 +1,24 @@
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
 a {
   text-decoration: none;
 }
 
 .home_banner {
-  margin: 0 auto;
-
-  .container {
+  // 首頁banner區
+  &_container {
     max-width: 940px;
     margin: 0 auto;
   }
-
+  // banner圖片
   &_pic {
     max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     @include desktop {
+      // 限制桌機板高度
       max-height: 496px;
       overflow: hidden;
     }
@@ -23,9 +26,14 @@ a {
       width: 100%;
     }
   }
-
+  // banner區導覽列
   &_nav {
     display: flex;
+    margin: 0 auto;
+    @include desktop {
+      // 桌機板要和圖片重疊
+      margin-top: -89px;
+    }
     li {
       // 容器寬度平分給三個物件
       width: calc(100% / 3);
@@ -46,13 +54,13 @@ a {
       border-left: 1px solid $white;
     }
     a {
-      // li的寬度
+      // 填滿li的寬度
       width: 100%;
       padding: 40px 0;
       // 文字直向排列
       writing-mode: vertical-lr;
       font-size: 20px;
-      line-height: 1.2;
+      letter-spacing: 0.2em;
       // 未觸碰的效果
       color: $white;
       font-weight: 300;
@@ -61,10 +69,16 @@ a {
       // 文字置中
       display: flex;
       align-items: center;
+
+      @include desktop {
+        padding: 60px 0;
+        font-size: 24px;
+        letter-spacing: 0.25em;
+      }
       //利用偽元素製作半透明背景色
       &::before {
         content: "";
-        // 填滿容器
+        // 填滿a容器
         width: 100%;
         height: 100%;
         // 定位在relative的位置
@@ -85,6 +99,228 @@ a {
       &::before {
         background-color: $yellow;
       }
+    }
+  }
+}
+
+// 手機板和桌機板不同圖片
+.home_title_mobile {
+  display: block;
+  margin: 0 auto;
+  @include desktop {
+    display: none;
+  }
+}
+.home_title_desktop {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
+
+// 首頁主要內文
+.home_main {
+  // 為什麼選擇了做甜點
+  &_do {
+    background-color: $bg-light;
+    @include desktop {
+      margin-top: 80px;
+    }
+    .home_main_pic {
+      // 排序最後
+      order: 5;
+    }
+  }
+  // 為什麼選擇了吃甜點
+  &_eat {
+    background-color: $bg-light;
+    @include desktop {
+      margin-top: 100px;
+      .home_main_title {
+        // 和右側圖片拉開距離
+        margin-right: 42px;
+      }
+      p {
+        // 文字區左側距離邊線改變
+        margin-left: -41.5px;
+      }
+    }
+    .home_main_pic {
+      // 排序最前
+      order: -5;
+    }
+  }
+  &_container {
+    @include desktop {
+      // 桌機板限制最大寬度並置中
+      max-width: 940px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: start;
+    }
+  }
+  &_title {
+    // 手機板覆蓋背景綠色
+    background-color: $white;
+    padding: 30px;
+    @include desktop {
+      // 製造不規則版面效果
+      margin-top: -20px;
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+  &_pic {
+    flex-shrink: 0;
+    height: 250px;
+    overflow: hidden;
+    // 圖片置中
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include desktop {
+      // 製造不規則版面效果
+      height: 460px;
+      margin: -20px 0;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &_txt {
+    color: $text-green;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 2;
+    font-weight: 300;
+    @include desktop {
+      max-height: 420px;
+      padding: 70px 80px 70px 55px;
+      writing-mode: vertical-rl;
+    }
+  }
+}
+
+// 首頁商品區
+.home_product {
+  &_container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    @include desktop {
+      padding-bottom: 60px;
+    }
+  }
+  &_title {
+    padding: 30px;
+    img {
+      margin: 0 auto;
+    }
+    @include desktop {
+      margin: 80px 0;
+    }
+  }
+  &_item {
+    // 手機版左右留白
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: $gutter;
+    @include desktop {
+      padding: 0;
+      flex-direction: row;
+    }
+  }
+  &_pic {
+    width: 100%;
+    height: 315px;
+    overflow: hidden;
+    position: relative;
+    // 圖片置中
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+    &::before {
+      // 商品圖裝飾
+      content: "本日精選";
+      width: 38px;
+      height: 107px;
+
+      position: absolute;
+      top: 0;
+      left: 21px;
+
+      writing-mode: vertical-lr;
+      background-color: $dark-green;
+      color: $bg-light;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &_favorite {
+    position: absolute;
+    top: 19px;
+    right: 20px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+  }
+  &_info {
+    display: flex;
+    border-left: 1px solid $bg-light;
+    border-right: 1px solid $bg-light;
+    div + div {
+      border-left: 1px solid $bg-light;
+    }
+  }
+  &_name {
+    width: 58%;
+    font-weight: 300;
+  }
+  &_price {
+    width: 42%;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  &_name,
+  &_price {
+    padding: 14px 0;
+    font-size: 20px;
+    color: $dark-green;
+    display: flex;
+    justify-content: center;
+  }
+  &_add {
+    width: 100%;
+    background-color: $bg-light;
+    color: $dark-green;
+    font-weight: 600;
+    font-size: 24px;
+    padding: 16px 0;
+
+    display: flex;
+    justify-content: center;
+
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $dark-green;
+      color: $white;
     }
   }
 }

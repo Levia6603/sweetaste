@@ -17,9 +17,11 @@ $gutter: 20px;
 
 // 設定桌機版的格子寬度 總共 12 格
 // 寫在 media query 裡面保證它只會在某個寬度下作用
-@for $i from 1 through 12 {
-  .col-lg-#{$i} {
-    width: calc((100% - ($gutter * 11)) / 12 * $i + $gutter * ($i - 1));
+@include desktop {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      width: calc((100% - ($gutter * 11)) / 12 * $i + $gutter * ($i - 1));
+    }
   }
 }
 

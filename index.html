@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sweetaste</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/all.css" />
   </head>
   <body>
@@ -30,16 +31,101 @@
 
     <!-- 首頁banner區 -->
     <section class="home_banner">
-      <div class="container">
+      <div class="home_banner_container">
         <!-- banner圖片 -->
         <div class="home_banner_pic">
           <img src="src/imgs/home_banner.avif" alt="sweetaste home_banner" />
         </div>
         <!-- banner區導覽列 -->
-        <ul class="home_banner_nav">
+        <ul class="home_banner_nav col-lg-10">
           <li class="banner_nav1"><a href="#">本日精選</a></li>
           <li class="banner_nav2"><a href="#">人氣推薦</a></li>
           <li class="banner_nav3"><a href="#">新品上市</a></li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- 首頁主要內文 -->
+    <main class="home_main">
+      <section class="home_main_do">
+        <div class="home_main_container">
+          <div class="home_main_title">
+            <img src="src/imgs/home_title/sm-橫式-為什麼選擇了做甜點.png" alt="為什麼選擇了做甜點_home" class="home_title_mobile">
+            <img src="src/imgs/home_title/lg-為什麼選擇了做甜點.png" alt="為什麼選擇了做甜點_home" class="home_title_desktop">
+          </div>
+          <div class="home_main_pic col-lg-6">
+            <img src="https://bit.ly/2xPn7Eq" alt="為什麼選擇了做甜點_圖示">
+          </div>
+          <div class="home_main_txt">
+            <p>青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。<br><br>是非成敗轉頭空，青山依舊在，幾度夕陽紅。白髮漁樵江渚上，古今多少事，都付笑談中。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="home_main_eat">
+        <div class="home_main_container">
+          <div class="home_main_title">
+            <img src="src/imgs/home_title/sm-橫式-為什麼一定要吃甜點.png" alt="為什麼選擇了吃甜點_home" class="home_title_mobile">
+            <img src="src/imgs/home_title/lg-為什麼一定要吃甜點.png" alt="為什麼選擇了吃甜點_home" class="home_title_desktop">
+          </div>
+          <div class="home_main_pic col-lg-6">
+            <img src="https://bit.ly/2zzAQS4" alt="為什麼選擇了吃甜點_圖示">
+          </div>
+          <div class="home_main_txt">
+            <p>青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。<br><br>是非成敗轉頭空，青山依舊在，幾度夕陽紅。白髮漁樵江渚上，古今多少事，都付笑談中。</p>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- 首頁商品區 -->
+    <section class="home_product">
+      <div class="home_product_container">
+        <div class="home_product_title">
+          <img src="src/imgs/home_title/sm-橫式-想吃甜點是不需要理由的.png" alt="想吃甜點是不需要理由的_home" class="home_title_mobile">
+          <img src="src/imgs/home_title/lg-想吃甜點是不需要理由的.png" alt="想吃甜點是不需要理由的_home" class="home_title_desktop">
+        </div>
+        <ul class="home_product_item">
+          <li class="col-lg-4">
+            <div class="home_product_pic">
+              <img src="src/imgs/p-2.png" alt="焦糖馬卡龍">
+              <button type="submit" class="home_product_favorite">
+                <img src="src/imgs/favorite_border.png" alt="點擊收藏">
+              </button>
+            </div>
+            <div class="home_product_info">
+              <div class="home_product_name">焦糖馬卡龍</div>
+              <div class="home_product_price">NT$ 450</div>
+            </div>
+            <button type="button" class="home_product_add">加入購物車</button>
+          </li>
+          <li class="col-lg-4">
+            <div class="home_product_pic">
+              <img src="src/imgs/p-5.png" alt="焦糖馬卡龍">
+              <button type="submit" class="home_product_favorite">
+                <img src="src/imgs/favorite_border.png" alt="點擊收藏">
+              </button>
+            </div>
+            <div class="home_product_info">
+              <div class="home_product_name">焦糖馬卡龍</div>
+              <div class="home_product_price">NT$ 450</div>
+            </div>
+            <button type="button" class="home_product_add">加入購物車</button>
+          </li>
+          <li class="col-lg-4">
+            <div class="home_product_pic">
+              <img src="src/imgs/p-7.avif" alt="焦糖馬卡龍">
+              <button type="submit" class="home_product_favorite">
+                <img src="src/imgs/favorite_border.png" alt="點擊收藏">
+              </button>
+            </div>
+            <div class="home_product_info">
+              <div class="home_product_name">焦糖馬卡龍</div>
+              <div class="home_product_price">NT$ 450</div>
+            </div>
+            <button type="button" class="home_product_add">加入購物車</button>
+          </li>
         </ul>
       </div>
     </section>

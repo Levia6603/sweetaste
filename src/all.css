@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -140,6 +141,77 @@ table {
 }
 
 /*colors*/
+.col-sm-1 {
+  width: calc((100% - 60px) / 4 * 1 + 0px);
+}
+
+.col-sm-2 {
+  width: calc((100% - 60px) / 4 * 2 + 20px);
+}
+
+.col-sm-3 {
+  width: calc((100% - 60px) / 4 * 3 + 40px);
+}
+
+.col-sm-4 {
+  width: calc((100% - 60px) / 4 * 4 + 60px);
+}
+
+/*
+    可在元素加上此類別，來限制元素的寬度
+    .col-sm-1
+    .col-sm-2
+    .col-sm-3
+    .col-sm-4
+*/
+@media (min-width: 768px) {
+  .col-lg-1 {
+    width: calc((100% - 220px) / 12 * 1 + 0px);
+  }
+  .col-lg-2 {
+    width: calc((100% - 220px) / 12 * 2 + 20px);
+  }
+  .col-lg-3 {
+    width: calc((100% - 220px) / 12 * 3 + 40px);
+  }
+  .col-lg-4 {
+    width: calc((100% - 220px) / 12 * 4 + 60px);
+  }
+  .col-lg-5 {
+    width: calc((100% - 220px) / 12 * 5 + 80px);
+  }
+  .col-lg-6 {
+    width: calc((100% - 220px) / 12 * 6 + 100px);
+  }
+  .col-lg-7 {
+    width: calc((100% - 220px) / 12 * 7 + 120px);
+  }
+  .col-lg-8 {
+    width: calc((100% - 220px) / 12 * 8 + 140px);
+  }
+  .col-lg-9 {
+    width: calc((100% - 220px) / 12 * 9 + 160px);
+  }
+  .col-lg-10 {
+    width: calc((100% - 220px) / 12 * 10 + 180px);
+  }
+  .col-lg-11 {
+    width: calc((100% - 220px) / 12 * 11 + 200px);
+  }
+  .col-lg-12 {
+    width: calc((100% - 220px) / 12 * 12 + 220px);
+  }
+}
+.container {
+  /* 設計稿的網格系統中，一個列寬是 60px */
+  /* 列與列之間的間隔寬度為 20px */
+  /* PC版本 */
+  /* max-width 960px = 60px*12 + 20px*11 + 10px*2(左右兩邊推gutter 的一半)*/
+  max-width: 960px; /* 共 960px */
+  margin: 0 auto; /*垂直置中*/
+  padding: 0 10px; /*gutter的一半= 20/2 =10 px*/
+}
+
 .nav {
   width: 100vw;
   margin: 0 auto;
@@ -340,14 +412,15 @@ table {
   margin-top: 23px;
 }
 
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
 a {
   text-decoration: none;
 }
 
-.home_banner {
-  margin: 0 auto;
-}
-.home_banner .container {
+.home_banner_container {
   max-width: 940px;
   margin: 0 auto;
 }
@@ -368,6 +441,12 @@ a {
 }
 .home_banner_nav {
   display: flex;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .home_banner_nav {
+    margin-top: -89px;
+  }
 }
 .home_banner_nav li {
   width: 33.3333333333%;
@@ -390,12 +469,19 @@ a {
   padding: 40px 0;
   writing-mode: vertical-lr;
   font-size: 20px;
-  line-height: 1.2;
+  letter-spacing: 0.2em;
   color: #fff;
   font-weight: 300;
   backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .home_banner_nav a {
+    padding: 60px 0;
+    font-size: 24px;
+    letter-spacing: 0.25em;
+  }
 }
 .home_banner_nav a::before {
   content: "";
@@ -414,4 +500,220 @@ a {
 }
 .home_banner_nav a:hover::before {
   background-color: #ffe180;
+}
+
+.home_title_mobile {
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .home_title_mobile {
+    display: none;
+  }
+}
+
+.home_title_desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .home_title_desktop {
+    display: block;
+  }
+}
+
+.home_main_do {
+  background-color: #eaf0ed;
+}
+@media (min-width: 768px) {
+  .home_main_do {
+    margin-top: 80px;
+  }
+}
+.home_main_do .home_main_pic {
+  order: 5;
+}
+.home_main_eat {
+  background-color: #eaf0ed;
+}
+@media (min-width: 768px) {
+  .home_main_eat {
+    margin-top: 100px;
+  }
+  .home_main_eat .home_main_title {
+    margin-right: 42px;
+  }
+  .home_main_eat p {
+    margin-left: -41.5px;
+  }
+}
+.home_main_eat .home_main_pic {
+  order: -5;
+}
+@media (min-width: 768px) {
+  .home_main_container {
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+  }
+}
+.home_main_title {
+  background-color: #fff;
+  padding: 30px;
+}
+@media (min-width: 768px) {
+  .home_main_title {
+    margin-top: -20px;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+.home_main_pic {
+  flex-shrink: 0;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .home_main_pic {
+    height: 460px;
+    margin: -20px 0;
+  }
+}
+.home_main_pic img {
+  width: 100%;
+  object-fit: cover;
+}
+.home_main_txt {
+  color: #8da291;
+  padding: 30px;
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .home_main_txt {
+    max-height: 420px;
+    padding: 70px 80px 70px 55px;
+    writing-mode: vertical-rl;
+  }
+}
+
+.home_product_container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .home_product_container {
+    padding-bottom: 60px;
+  }
+}
+.home_product_title {
+  padding: 30px;
+}
+.home_product_title img {
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .home_product_title {
+    margin: 80px 0;
+  }
+}
+.home_product_item {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .home_product_item {
+    padding: 0;
+    flex-direction: row;
+  }
+}
+.home_product_pic {
+  width: 100%;
+  height: 315px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.home_product_pic img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+.home_product_pic::before {
+  content: "本日精選";
+  width: 38px;
+  height: 107px;
+  position: absolute;
+  top: 0;
+  left: 21px;
+  writing-mode: vertical-lr;
+  background-color: #3f5d45;
+  color: #eaf0ed;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home_product_favorite {
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.home_product_favorite img {
+  width: 100%;
+}
+.home_product_info {
+  display: flex;
+  border-left: 1px solid #eaf0ed;
+  border-right: 1px solid #eaf0ed;
+}
+.home_product_info div + div {
+  border-left: 1px solid #eaf0ed;
+}
+.home_product_name {
+  width: 58%;
+  font-weight: 300;
+}
+.home_product_price {
+  width: 42%;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.home_product_name, .home_product_price {
+  padding: 14px 0;
+  font-size: 20px;
+  color: #3f5d45;
+  display: flex;
+  justify-content: center;
+}
+.home_product_add {
+  width: 100%;
+  background-color: #eaf0ed;
+  color: #3f5d45;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+.home_product_add:hover {
+  background-color: #3f5d45;
+  color: #fff;
 }
