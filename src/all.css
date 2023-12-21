@@ -141,8 +141,6 @@ table {
 }
 
 /*colors*/
-<<<<<<< HEAD
-=======
 .col-sm-1 {
   width: calc((100% - 60px) / 4 * 1 + 0px);
 }
@@ -214,7 +212,6 @@ table {
   padding: 0 10px; /*gutter的一半= 20/2 =10 px*/
 }
 
->>>>>>> dev
 .nav {
   margin: 0 auto;
 }
@@ -323,7 +320,7 @@ table {
   }
 }
 @media (min-width: 768px) {
-  .menu__container div:nth-child(2) {
+  .menu__container > div:nth-child(2) {
     display: flex;
     justify-content: space-between;
     flex-flow: column wrap;
